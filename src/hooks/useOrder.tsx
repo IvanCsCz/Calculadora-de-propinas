@@ -24,7 +24,7 @@ function useOrder() {
     setOrder(updatedOrder)
   }
 
-  const removeItem = (id: number) => {
+  const removeItem = (id: MenuItem['id']) => {
     const updatedOrder = order.filter((orderItem) => orderItem.id !== id )
     setOrder(updatedOrder)
   }

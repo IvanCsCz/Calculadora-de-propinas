@@ -3,7 +3,7 @@ import { OrderItem } from "../types"
 
 type OrderContentsProps = {
   order: OrderItem[],
-  removeItem: (id:number) => void
+  removeItem: (id:OrderItem['id']) => void
 }
 
 function OrderContents({order, removeItem}: OrderContentsProps) {
