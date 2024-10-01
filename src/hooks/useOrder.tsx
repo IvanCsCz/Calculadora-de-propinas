@@ -3,6 +3,7 @@ import type { MenuItem, OrderItem } from "../types"
 
 function useOrder() {
   const [order, setOrder] = useState<OrderItem[]>([])
+  const [tip, setTip] = useState(0)
 
   const addItem = (item: MenuItem) => {
     const itemExists = order.find(orderItem => orderItem.id === item.id)
@@ -29,10 +30,16 @@ function useOrder() {
     setOrder(updatedOrder)
   }
 
+  const selectTip = (value:number) => {
+    setTip(value)
+  }
+
   return {
     order,
+    tip,
     addItem,
-    removeItem
+    removeItem,
+    selectTip
   }
 }
 
