@@ -34,12 +34,18 @@ function useOrder() {
     setTip(value)
   }
 
+  const placeOrder = () => {
+    setOrder([])
+    setTip(0)
+  }
+
   return {
     order,
     tip,
     addItem,
     removeItem,
-    selectTip
+    selectTip,
+    placeOrder
   }
 }
 
